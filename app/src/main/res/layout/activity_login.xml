@@ -1,18 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginActivity">
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_EnterMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/enter_10_digit_number"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="@string/Mobile"
+        android:paddingTop="10dp"
+        android:paddingLeft="40dp"
+        android:id="@+id/tv_MobileHint"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/tv_EnterMobile"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tv_mobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        app:layout_constraintTop_toBottomOf="@+id/tv_MobileHint"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mobileNumber"
+        android:backgroundTint="@color/colorLightBrown"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/send_otp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_enter_otp"
+        tools:ignore="MissingConstraints"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="@string/enter_otp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_send_otp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/OTP"
+        android:textColor="@color/colorLightPink"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_otp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_otp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tv_otp_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_otp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_verify_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/colorMaroon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_otp_number"
+        tools:ignore="MissingConstraints"
+        android:text="@string/VERIFY"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

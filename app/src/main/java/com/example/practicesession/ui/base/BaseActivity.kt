@@ -1,11 +1,14 @@
 package com.example.practicesession.ui.base
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.view.inputmethod.InputMethodManager
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.example.practicesession.di.component.ActivityComponent
 import com.example.practicesession.di.component.DaggerActivityComponent
@@ -59,6 +62,12 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity() {
         if (supportFragmentManager.backStackEntryCount > 0)
             supportFragmentManager.popBackStackImmediate()
         else super.onBackPressed()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+
     }
 
     @LayoutRes

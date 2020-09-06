@@ -9,4 +9,40 @@
     <string name="server_connection_error">Not able to connect, please retry again</string>
     <string name="network_login_again">Please log in again</string>
 
+    //login
+    <string name="enter_10_digit_number">Enter your 10 digit Mobile Number!!</string>
+    <string name="Mobile">Mobile</string>
+    <string name="send_otp">SEND OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="OTP">OTP</string>
+    <string name="VERIFY">VERIFY</string>
+    <string name="log_in">LOG IN</string>
+
+    //dashboard
+    <string name="dashboard">DASHBOARD</string>
+    <string name="orders">Orders</string>
+    <string name="active_orders">Active Orders</string>
+    <string name="successful_login">Successfully Login!!</string>
+    <string name="order_items">ORDER ITEMS</string>
+
+    <string-array name="itemId">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+        <item>Item 7</item>
+        <item>Item 8</item>
+        <item>Item 9</item>
+        <item>Item 10</item>
+    </string-array>
+
+    <string-array name="itemQuantity">
+        <item>Kg</item>
+        <item>gm</item>
+        <item>l</item>
+
+    </string-array>
+
 </resources>

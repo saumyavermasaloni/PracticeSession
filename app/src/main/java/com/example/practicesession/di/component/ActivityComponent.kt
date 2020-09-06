@@ -2,6 +2,7 @@ package com.example.practicesession.di.component
 
 import com.example.practicesession.di.ActivityScope
 import com.example.practicesession.di.module.ActivityModule
+import com.example.practicesession.ui.dashborad.DashboardActivity
 import com.example.practicesession.ui.login.LoginActivity
 import dagger.Component
 
@@ -13,4 +14,6 @@ import dagger.Component
 interface ActivityComponent {
 
     fun inject(activity:LoginActivity)
+
+    fun inject(activity:DashboardActivity)
 }

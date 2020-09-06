@@ -5,6 +5,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.practicesession.data.model.ItemList
 
 abstract class BaseAdapter<T : Any, VH : BaseItemViewHolder<T, out BaseItemViewModel<T>>>(
     parentLifecycle: Lifecycle,
@@ -89,9 +90,25 @@ abstract class BaseAdapter<T : Any, VH : BaseItemViewHolder<T, out BaseItemViewM
         val oldCount = itemCount
         this.dataList.addAll(dataList)
         val currentCount = itemCount
-        if (oldCount == 0 && currentCount > 0)
+        if (currentCount > 0)
             notifyDataSetChanged()
         else if (oldCount > 0 && currentCount > oldCount)
             notifyItemRangeChanged(oldCount - 1, currentCount - oldCount)
+    }
+
+    fun appendDataItem(it: T)
+    {
+        val oldCount = itemCount
+        this.dataList.add(it)
+        val currentCount = itemCount
+        if (currentCount > 0)
+            notifyItemInserted(currentCount-1)
+        //else if (oldCount > 0 && currentCount > oldCount)
+    }
+
+    fun deleteDataItem(it: Int)
+    {
+        this.dataList.removeAt(it)
+            notifyItemRemoved(it)
     }
 }

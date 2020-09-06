@@ -1,4 +1,4 @@
-package com.mindorks.bootcamp.instagram.data.local.prefs
+package com.example.practicesession.data.local.prefs
 
 import android.content.SharedPreferences
 import javax.inject.Inject
